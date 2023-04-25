@@ -9,9 +9,8 @@
 set -e
 
 CKAN_SOLR_SCHEMA_URL=https://raw.githubusercontent.com/JGulic/solr-schema/main/schema.solr8.xml
-#CKAN_SOLR_CONF=https://raw.githubusercontent.com/JGulic/solr-schema/main/solrconfig.xml
-CKAN_SOLR_CONF=https://raw.githubusercontent.com/ckan/ckan/ckan-2.9.7/contrib/docker/solr/solrconfig.xml
-echo "HEU"
+CKAN_SOLR_CONF=https://raw.githubusercontent.com/JGulic/solr-schema/main/solrconfig.xml
+#CKAN_SOLR_CONF=https://raw.githubusercontent.com/ckan/ckan/ckan-2.9.7/contrib/docker/solr/solrconfig.xml
 
 echo "Check whether managed schema exists for CKAN $CKAN_VERSION"
 if ! curl --output /dev/null --silent --head --fail "$CKAN_SOLR_SCHEMA_URL"; then
